@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<title>My Dictionary</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    html {
+        height: 100%;
+        font-family: "Inconsolata", sans-serif;
+    }
+
+    .menu {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="#contacts" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACTS</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#privacy_policy" id="privacy_policy_button" class="w3-bar-item w3-button">PRIVACY
+                        POLICY</a>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+        <a href="#contacts" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACTS</a>
+        <a href="#privacy_policy" id="privacy_policy_button_navDemo" class="w3-bar-item w3-button w3-padding-large"
+            onclick="myFunction()">PRIVACY POLICY</a>        
+    </div>
+
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    </header>
+
+    <!-- Add a background color and large text to the whole page -->
+    <div class="w3-sand w3-grayscale w3-large">
+
+        <!-- About Container -->
+        <div class="w3-container" id="about">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE APPLICATION</span></h5>
+                <p>Introducing <strong>SnapCopy</strong>, the ultimate solution for seamless data synchronization across your devices.</p>
+                <p>With SnapCopy, you can effortlessly copy and paste non-sensitive data with just one click, ensuring your information is accessible wherever you are, across all your devices. Whether you're switching between a tablet, or smartphone, SnapCopy keeps your data in sync, eliminating the hassle of manual transfers or the need for multiple copy-paste actions.</p>
+                <p>Designed with simplicity and efficiency in mind, our application ensures that your productivity is never hindered by device boundaries. Experience the convenience of having your data right where you need it, when you need it, with SnapCopy.</p>
+            </div>
+        </div>
+
+
+        <!-- Contact/Area Container -->
+        <div class="w3-container" id="contacts">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACTS</span></h5>
+                <div class="w3-col m6 w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker" style="width:30px"></i> Ukraine<br>
+                    <i class="fa fa-envelope" style="width:30px"> </i> Email: dmytro.v.chumakov.work@gmail.com<br>
+                </div>
+            </div>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+        <a href="https://www.linkedin.com/in/dmytro-chumakov"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+        <a href="https://github.com/dmytrochumakov/SnapCopy"><i class="fa fa-github w3-hover-opacity"></i></a>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                class="w3-hover-text-green">w3.css</a></p>
+    </footer>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById("privacy_policy_button").onclick = function () {
+            location.href = "privacy_policy.html";
+        };
+        document.getElementById("privacy_policy_button_navDemo").onclick = function () {
+            location.href = "privacy_policy.html";
+        };
+    </script>
+
+</body>
+
+</html>
